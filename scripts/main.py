@@ -1,6 +1,11 @@
-from crypto import *
-start_date = '2012-01-01'
-end_date = '2020-11-10'
+from eod import *
+start_date = '2010-01-01'
 
-bpi_df = get_bpi(start_date, end_date)
-print(bpi_df)
+#symbols = 'SP500BDT.INDX'  #S&P500 Bond Index
+#symbols = 'GSPC.INDX'       #S&P500 Index
+#symbols = 'BCOMGCTR.INDX'   #Gold Total Return Index
+#symbols = 'BTC-USD.CC'     #Bitcoin EOD Price
+symbols = 'GC.COMM'         #Gold EOD Price
+
+eod_df = get_data(symbols, start_date)
+print(eod_df)

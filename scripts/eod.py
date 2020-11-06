@@ -10,11 +10,11 @@ import dateutil.parser
 
 
 def get_data(symbols, start_date):
-    symbols_dict = {'SP500BDT.INDX':'S&P500 Bond Index', 
-                    'GSPC.INDX':'S&P500 Index', 
-                    'BCOMGCTR.INDX':'Gold Total Return Index', 
-                    'BTC-USD.CC':'Bitcoin EOD Price', 
-                    'GC.COMM':'Gold EOD Price',}
+ #   symbols_dict = {'SP500BDT.INDX':'S&P500 Bond Index', 
+ #                   'GSPC.INDX':'S&P500 Index', 
+ #                   'BCOMGCTR.INDX':'Gold Total Return Index', 
+ #                   'BTC-USD.CC':'Bitcoin EOD Price', 
+ #                   'GC.COMM':'Gold EOD Price',}
     
     dotenv.load_dotenv()
     eod_api_key = os.getenv("EOD_API_KEY")
@@ -37,7 +37,7 @@ def get_data(symbols, start_date):
             elif list == "adjusted_close":
                 temp_close = dict[list] 
             
-        new_row = {'Date':temp_date, 'Asset':symbols_dict[symbols], 'AdjClosePrice':temp_close}
+        new_row = {'Date':temp_date, 'Asset':symbols, 'AdjClosePrice':temp_close}
         eod_df = eod_df.append(new_row, ignore_index=True)                 
     
     eod_df = eod_df.set_index(['Date']) 
