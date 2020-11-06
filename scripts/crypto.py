@@ -25,6 +25,7 @@ def get_bpi(start_date, end_date):
 
     bpi_df = bpi_df.reset_index()
     bpi_df['date'] = pd.to_datetime(bpi_df['date'], format='%Y-%m-%d')
+    bpi_df['asset'] = "Crypto Index"
 
     bpi_df = bpi_df.set_index(['date'])
 
