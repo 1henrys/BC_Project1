@@ -22,7 +22,7 @@ def send_msg(msgbody, to_number):
 
     return message.sid
 
-msgbody = "Join Earth's mightiest heroes. Like Kevin Bacon."
-to_number = '+15512088818'
-msid = send_msg(msgbody, to_number)
-print(msid)
+#msgbody = "Join Earth's mightiest heroes. Like Kevin Bacon."
+#to_number = '+15512088818'
+#msid = send_msg(msgbody, to_number)
+#print(msid)

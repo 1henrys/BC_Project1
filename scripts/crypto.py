@@ -20,20 +20,22 @@ def get_bpi(start_date, end_date):
     data = response_data.json()
     bpi_list = data["bpi"]
 
-    bpi_df = pd.DataFrame.from_dict(bpi_list, orient='index', columns=['bpi_closing'])
-    bpi_df.index.name = 'date'
+    bpi_df = pd.DataFrame.from_dict(bpi_list, orient='index', columns=['BPI_Closing'])
+    bpi_df.index.name = 'Date'
 
     bpi_df = bpi_df.reset_index()
-    bpi_df['date'] = pd.to_datetime(bpi_df['date'], format='%Y-%m-%d')
-    bpi_df['asset'] = "Crypto Index"
+    bpi_df['Date'] = pd.to_datetime(bpi_df['Date'], format='%Y-%m-%d')
+    bpi_df['Asset'] = "Crypto Index"
 
-    bpi_df = bpi_df.set_index(['date'])
+    bpi_df = bpi_df.set_index(['Date'])
+    bpi_df = bpi_df[['Asset', 'BPI_Closing']]
+    bpi_df = bpi_df.sort_index()
 
     return bpi_df
 
 
-start_date = '2012-01-01'
-end_date = '2020-11-10'
+#start_date = '2012-01-01'
+#end_date = '2020-11-10'
 
-bpi_df = get_bpi(start_date, end_date)
-print(bpi_df)
+#bpi_df = get_bpi(start_date, end_date)
+#print(bpi_df)
