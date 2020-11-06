@@ -43,9 +43,9 @@ def get_data(symbols):
     return ms_df
 
 
-symbols = 'GSPC.INDX'
+#symbols = 'GSPC.INDX'
 
 #symbols = 'SCHH'
 
-ms_df = get_data(symbols)
-print(ms_df)
+#ms_df = get_data(symbols)
+#print(ms_df)

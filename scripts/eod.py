@@ -44,18 +44,18 @@ def get_data(symbols, start_date):
     eod_df = eod_df.sort_index()
     return eod_df
 
-start_date = '2010-01-01'
+#start_date = '2010-01-01'
 
-symbols = "SP500BDT.INDX"
+#symbols = "SP500BDT.INDX"
 
-symbols = "GSPC.INDX"
+#symbols = "GSPC.INDX"
 
-symbols = "BCOMGCTR.INDX"
+#symbols = "BCOMGCTR.INDX"
 
-symbols = "BTC-USD.CC"
+#symbols = "BTC-USD.CC"
 
 #symbols = "GC.COMM"
 
 
-eod_df = get_data(symbols, start_date)
-print(eod_df)
+#eod_df = get_data(symbols, start_date)
+#print(eod_df)
