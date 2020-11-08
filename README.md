@@ -75,10 +75,12 @@ The second type of python and notebook files, the send_sms files,  are used to c
   art_analysis.ipynb
   crypto.ipynb
   edo.ipynb
+  gold_analysis.ipynb
   market.ipynb
   real_estate_cleaning.ipynb
   real_estate_analysis.ipynb
   schh.ipynb
+  yahoo_analysis.ipynb
   
   ### Data Viz and Panel Scratchpads
   
